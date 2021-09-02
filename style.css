@@ -1,0 +1,63 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Imagebs responsivas */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.header {
+  background: #1d1e20;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  margin-left: 10px;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px;
+}
+
+/* Flexbox */
+.flex {
+  display: flex;
+  flex-wrap: wrap; /*Se for preciso quebre para a linha de baixo */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Div que esta dentro da class flex */
+/* primeiro numero 1 para que o conteúdo da div se expanda
+Segundo 1 para que ela poça ficar menos - flex sherink
+e que ele sempre tenha uma base de 200px */
+
+.flex > div {
+  flex: 1 1 200px;
+  margin: 10px;
+}
