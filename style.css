@@ -6,6 +6,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  margin-bottom: 100px;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -60,4 +64,29 @@ e que ele sempre tenha uma base de 200px */
 .flex > div {
   flex: 1 1 200px;
   margin: 10px;
+}
+
+/* Grid layout 1 */
+.grid1 {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; => Equivalente abaixo */
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 780px;
+  margin: 0 auto;
+  grid-gap: 20px;
+}
+
+/* Captura a quarta div em diante */
+.grid1 > div:nth-child(n+4) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+}
+
+.grid1 > div.anuncio {
+  grid-column: 1;
+  grid-row: 2 / 5; /*Pega na coluna 1 as linha 2,3,4 e 5*/
+  border-top: 10px solid red;
+  display: block;
 }
